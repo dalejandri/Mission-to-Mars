@@ -8,7 +8,13 @@ Robin's web app is looking good and functioning well, but she wants to add more 
 ### This new assignment consists of three technical analyses:
 
 - Deliverable 1: Scrape Full-Resolution Mars Hemisphere Images and Titles
+
+      Using BeautifulSoup and Splinter, you’ll scrape full-resolution images of Mars’s hemispheres and the titles of those images.
+
 - Deliverable 2: Update the Web App with Mars Hemisphere Images and Titles
+
+      Using Python and HTML to add to the initial pythoncode, update the Mongo database, and modify the index.html file so the webpage contains all the information collected in as well as the full-resolution image and title for each hemisphere image.
+      
 - Deliverable 3: Add Bootstrap 3 Components
 
 ![](Resources/webview.PNG)
