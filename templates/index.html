@@ -12,21 +12,28 @@
   </head>
   <body>
     <div class="container">
-      <!-- Add Jumbotron to Header -->
+      <!-- Add Jumbotron to Header -->      
       <div class="jumbotron text-center">
-        <h1>Mission to Mars</h1>
-        <!-- Add a button to activate scraping script -->
-        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+        <h1 class="display-4">Mission to Mars!</h1>
+        <p class="lead">Red Planet news information, Mars hemispheres images and an Earth comparison table.</p>
+          <p><a class="btn btn-success btn-lg" href="/scrape" role="button">Update New Data</a></p>
+        <hr3 class="h6">
+        <p><small>Click update to gather fresh data from websites like Red Planet science / Space images & Mars hemispheres.</small></p>
+        <p class="h6">
+          
+        </p>
       </div>
-
       <!-- Add section for Mars News -->
       <div class="row" id="mars-news">
         <div class="col-md-12">
           <div class="media">
             <div class="media-body">
-              <h2>Latest Mars News</h2>
-              <h4 class="media-heading">{{ mars.news_title }}</h4>
-              <p>{{ mars.news_paragraph }}</p>
+              <h2>
+                <strong>Latest Mars News</strong> 
+              </h2>
+              <h5 class="media-heading">{{ mars.news_title }}</h5>
+              <!-- text class lead -->
+              <p class="lead">{{ mars.news_paragraph }}</p>
             </div>
           </div>
         </div>
@@ -34,21 +41,31 @@
 
       <!-- Section for Featured Image and Facts table -->
       <div class="row" id="mars-featured-image">
-        <div class="col-md-8">
-          <h2>Featured Mars Image</h2>
+        <!-- Responsible -->
+        <div class="col-xs-12 col-sm-6 col-lg-8">
+          <!-- Center text -->
+          <h2 class="text-center">
+            <strong>Featured Mars Image</strong>
+          </h2>
 
           <!-- if images is False/None/non-existent, then default to error message -->
+          <!-- image frame rounded -->
           <img
             src="{{mars.featured_image | default('static/images/error.png', true) }}"
-            class="img-responsive"
+            class="img-responsive img-rounded"
             alt="Responsive image"
           />
         </div>
-
-        <div class="col-md-4">
+        
+        <!-- Responsible -->
+        <div class="col-xs-6 col-lg-4">
           <!-- Mars Facts -->
-          <div class="row" id="mars-facts">
-            <h4>Mars Facts</h4>
+          <!-- Center content -->
+          <div class="row center-block" id="mars-facts">
+            <!-- Center text -->
+            <h3 class="text-center">
+              <strong>Mars Facts</strong>
+            </h3>
             {{ mars.facts | safe }}
           </div>
         </div>
@@ -57,11 +74,15 @@
       <!-- Section for Mars Hemispheres -->
       <div class="row" id="mars-hemispheres">
         <div class="page-header">
-          <h2 class="text-center">Mars Hemispheres</h2>
+          <h2 class="text-center">
+            <strong>Mars Hemispheres</strong>
+          </h2>
         </div>
 
         {% for hemisphere in mars.hemispheres %}
-        <div class="col-md-6">
+        <!-- Responsible -->
+        <div class="col-xs-6 col-sm-3">
+          <!-- image frame thumbnail -->
           <div class="thumbnail">
             <img src="{{hemisphere.img_url | default('static/images/error.png', true)}}" alt="...">
             <div class="caption">
