@@ -1,8 +1,15 @@
 # Mission-to-Mars
 
-The data Robin has gathered for her web app is great. She's been able to pull a great image, the most recent news article summary, and even an HTML table. Each data type is different, though, with text and images and HTML all together. Compared to SQL's orderly relational system, where each table is linked to at least one other by a key, the data we've helped Robin gather is a bit chaotic. This is where a non-relational database comes in.
-
 ![](Resources/intro.PNG)
+
+## Background
+Robin's web app is looking good and functioning well, but she wants to add more polish to it. She had been admiring images of Mars’s hemispheres online and realized that the site is scraping-friendly. She would like to adjust the current web app to include all four of the hemisphere images. To do this, you’ll use BeautifulSoup and Splinter to scrape full-resolution images of Mars’s hemispheres and the titles of those images, store the scraped data on a Mongo database, use a web application to display the data, and alter the design of the web app to accommodate these images.
+
+### This new assignment consists of three technical analyses:
+
+- Deliverable 1: Scrape Full-Resolution Mars Hemisphere Images and Titles
+- Deliverable 2: Update the Web App with Mars Hemisphere Images and Titles
+- Deliverable 3: Add Bootstrap 3 Components
 
 ![](Resources/webview.PNG)
 
